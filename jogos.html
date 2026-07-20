@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootScore - Jogos</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+<header>
+
+    <h1>⚽ FootScore</h1>
+
+</header>
+
+<section class="pesquisa">
+
+    <input type="text" id="pesquisaJogos" placeholder="Pesquisar jogo, time ou campeonato">
+
+</section>
+
+<section class="ao-vivo">
+
+    <h2>📅 Jogos do Dia</h2>
+
+    <div class="card">
+        <h3>Brasileirão Série A</h3>
+        <p>Flamengo <strong>2 x 1</strong> Palmeiras</p>
+        <span>78' • Ao Vivo 🔴</span>
+    </div>
+
+    <div class="card">
+        <h3>Premier League</h3>
+        <p>Manchester City <strong>1 x 0</strong> Liverpool</p>
+        <span>65' • Ao Vivo 🔴</span>
+    </div>
+
+    <div class="card">
+        <h3>La Liga</h3>
+        <p>Barcelona <strong>0 x 0</strong> Real Madrid</p>
+        <span>17:00</span>
+    </div>
+
+    <div class="card">
+        <h3>Champions League</h3>
+        <p>Bayern de Munique <strong>x</strong> PSG</p>
+        <span>20:45</span>
+    </div>
+
+    <div class="card">
+        <h3>Libertadores</h3>
+        <p>Botafogo <strong>x</strong> River Plate</p>
+        <span>21:30</span>
+    </div>
+
+</section>
+
+<nav>
+
+    <button onclick="window.location.href='index.html'">🏠 Home</button>
+
+    <button onclick="window.location.href='jogos.html'">⚽ Jogos</button>
+
+    <button onclick="window.location.href='tabela.html'">🏆 Tabela</button>
+
+    <button onclick="window.location.href='favoritos.html'">⭐ Favoritos</button>
+
+    <button onclick="window.location.href='perfil.html'">👤 Perfil</button>
+
+</nav>
+
+<script src="js/app.js"></script>
+<script src="js/api.js"></script>
+
+<script>
+// Pesquisa simples dos cards
+const pesquisa = document.getElementById("pesquisaJogos");
+
+pesquisa.addEventListener("keyup", () => {
+
+    const texto = pesquisa.value.toLowerCase();
+
+    document.querySelectorAll(".card").forEach(card => {
+
+        const conteudo = card.innerText.toLowerCase();
+
+        if (conteudo.includes(texto)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+
+});
+</script>
+
+</body>
+
+</html>
