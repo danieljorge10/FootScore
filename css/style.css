@@ -1,0 +1,151 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:#fff;
+}
+
+/* HEADER */
+
+header{
+    background:#111827;
+    padding:20px;
+    text-align:center;
+    border-bottom:2px solid #22c55e;
+}
+
+header h1{
+    color:#22c55e;
+    font-size:32px;
+}
+
+/* PESQUISA */
+
+.pesquisa{
+    padding:20px;
+}
+
+.pesquisa input{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+}
+
+/* TITULOS */
+
+h2{
+    margin-bottom:15px;
+    color:#22c55e;
+}
+
+/* SEÇÕES */
+
+.ao-vivo,
+.hoje,
+.campeonatos{
+    padding:20px;
+}
+
+/* CARDS */
+
+.card{
+    background:#1e293b;
+    padding:20px;
+    margin-bottom:15px;
+    border-radius:15px;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.card:hover{
+    transform:scale(1.02);
+    background:#273549;
+}
+
+.card h3{
+    color:#22c55e;
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.card span{
+    color:#f87171;
+    font-weight:bold;
+}
+
+/* LISTA */
+
+ul{
+    list-style:none;
+}
+
+ul li{
+    background:#1e293b;
+    margin-bottom:10px;
+    padding:15px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+ul li:hover{
+    background:#273549;
+}
+
+/* MENU */
+
+nav{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    background:#111827;
+    display:flex;
+    justify-content:space-around;
+    padding:15px 0;
+    border-top:2px solid #22c55e;
+}
+
+nav button{
+    background:none;
+    border:none;
+    color:white;
+    cursor:pointer;
+    font-size:15px;
+    transition:.3s;
+}
+
+nav button:hover{
+    color:#22c55e;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+header h1{
+    font-size:26px;
+}
+
+.card p{
+    font-size:17px;
+}
+
+nav button{
+    font-size:13px;
+}
+
+}
